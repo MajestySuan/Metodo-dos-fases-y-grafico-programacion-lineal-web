@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación Lineal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+     <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="img/distrital.png" alt="Logo">
+            <div class="navbar-logo-text">Métodos de Programación Lineal</div>
+        </div>
+        <div class="navbar-links">
+            <a href="index.html" class="navbar-link">Inicio</a>
+            <a href="dosfases.html" class="navbar-link active">Dos Fases</a>
+            <a href="grafico.html" class="navbar-link active">Gráfico</a>
+        </div>
+    </nav>
+
+    <div class="contenedor-principal">
+        <div class="contenedor-formulario">
+            <h1>Metodo Grafico</h1>
+            
+            <div class="seccion">
+                <h2>Función Objetivo:</h2>
+                <div class="selector-objetivo">
+                    <select id="tipo-objetivo">
+                        <option value="max">Maximizar</option>
+                        <option value="min">Minimizar</option>
+                    </select>
+                </div>
+                <div class="funcion-z">
+                    <span class="label-z">Función Z =</span>
+                    <div class="coeficientes">
+                        <div class="input-coeficiente">
+                            <input type="text" placeholder="0" class="coef-input" value="0">
+                            <span class="variable">x₁</span>
+                        </div>
+                        <span class="operador">+</span>
+                        <div class="input-coeficiente">
+                            <input type="text" placeholder="0" class="coef-input" value="0">
+                            <span class="variable">x₂</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion">
+                <h2>Restricciones:</h2>
+                <div id="lista-restricciones">
+                    <div class="restriccion">
+                        <div class="restriccion-campos">
+                            <div class="input-coeficiente">
+                                <input type="text" placeholder="0" class="coef-input" value="0">
+                                <span class="variable">x₁</span>
+                            </div>
+                            <span class="operador">+</span>
+                            <div class="input-coeficiente">
+                                <input type="text" placeholder="0" class="coef-input" value="0">
+                                <span class="variable">x₂</span>
+                            </div>
+                            <select class="operador-restriccion">
+                                <option value="<=">≤</option>
+                                <option value="=">=</option>
+                                <option value=">=">≥</option>
+                            </select>
+                            <input type="text" placeholder="0" class="valor-restriccion" value="0">
+                        </div>
+                        <button class="btn-eliminar">×</button>
+                    </div>
+                </div>
+                <button id="btn-anadir" class="btn-secundario">Añadir Restricción</button>
+            </div>
+
+            <button id="btn-resolver" class="btn-primario">Resolver</button>
+        </div>
+        
+        <div class="contenedor-grafico">
+            <h1 class="titulo-grafico">Solución</h1>
+            <div id="grafico-region-factible">
+                <div id="chart_div"></div>
+                <div id="solucion-info" class="solucion-info"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

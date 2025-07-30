@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Método de Dos Fases - Programación Lineal</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="img/distrital.png" alt="Logo">
+            <div class="navbar-logo-text">Métodos de Programación Lineal</div>
+        </div>
+        <div class="navbar-links">
+            <a href="index.html" class="navbar-link">Inicio</a>
+            <a href="dosfases.html" class="navbar-link active">Dos Fases</a>
+            <a href="grafico.html" class="navbar-link active">Gráfico</a>
+        </div>
+    </nav>
+  <main class="contenedor-principal">
+    <section class="contenedor-formulario">
+              <h1>Método de Dos Fases</h1>
+        <form id="form-dos-fases">
+        <!-- Nueva sección para seleccionar número de variables -->
+        <div class="seccion">
+          <div class="seccion">
+                <h2>Número de variables (max 20):</h2>
+            <input type="number" id="num-variables" min="1" max="20" value="2">
+            </div>
+          <button type="button" id="btn-generar" class="btn-secundario">Generar Campos</button>
+        </div>
+        
+        <h2>Función Objetivo:</h2>
+                <div class="selector-objetivo">
+                    <select id="tipo-objetivo">
+                        <option value="max">Minimizar</option>
+                        <option value="min">Maximizar</option>
+                    </select>
+                </div>
+        
+        <div class="seccion funcion-z">
+          <label class="label-z">Función Z =</label>
+          <div id="coeficientes-z" class="coeficientes"></div>
+        </div>
+        
+         <div class="seccion">
+          <label>Restricciones:</label>
+          <div id="lista-restricciones"></div>
+          <button type="button" id="btn-anadir" class="btn-secundario">Añadir Restricción</button>
+        </div>
+        
+        <button type="button" id="btn-resolver" class="btn-primario">Resolver</button>
+    </form>
+      <div class="solucion-info" id="solucion-info"></div>
+    </section>
+    <section class="contenedor-grafico">
+      <h2>Paso a paso (Tablas Simplex)</h2>
+      <div id="paso-a-paso"></div>
+
+    </section>  
+  </main>
+  <script src="js/dosfases.js"></script>
+</body>
+</html>
+
+    
